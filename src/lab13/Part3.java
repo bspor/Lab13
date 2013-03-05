@@ -15,19 +15,27 @@ public class Part3 {
     public static void main(String[] args) {
         
     Employee emp1 = new Employee("Bob", "Accountant");
-    Employee emp2 = new Employee("Sally", "Receptionist");
+    Dog emp2 = new Dog("Sally", "A10110111011");
     Employee emp3 = new Employee("Burt", "Slacker");
     
     
-    List<Employee> employee = new ArrayList<>();  
+    List employee = new ArrayList();  
     
     employee.add(emp1);
     employee.add(emp2);
     employee.add(emp3);
     
-    for (Employee e : employee) {
+    for (Object e : employee) {
         //Works without casting
-        System.out.println(e.getName() + " is a " + e.getJob());
+        if ( e instanceof Dog) {
+            Dog d = (Dog) e;
+            System.out.println("The dog is named " + d.getName());
+        } else if (e instanceof Employee) {
+            Employee emp;
+            emp = (Employee) e;
+            System.out.println("This person is a " + emp.getJob());
+        }
+       
     }
     }   
 }
