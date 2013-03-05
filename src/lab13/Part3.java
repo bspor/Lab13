@@ -11,7 +11,7 @@ import java.util.List;
  *
  * @author bspor
  */
-public class Part2 {
+public class Part3 {
     public static void main(String[] args) {
         
     Employee emp1 = new Employee("Bob", "Accountant");
